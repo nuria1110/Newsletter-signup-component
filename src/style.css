@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --tomato-color: hsl(4, 100%, 67%);
+  --dark-grey-color: hsl(234, 29%, 20%);
+  --charcoal-grey-color: hsl(235, 18%, 26%);
+  --grey-color: hsl(231, 7%, 60%);
+  --white-color: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background: var(--charcoal-grey-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Card */
+.card-signup, .card-thankyou {
+  background: var(--white-color);
+  color: var(--dark-grey-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  border-radius: 20px;
+  opacity: 1;
+}
+
+.card-signup {
+  padding: 20px;
+  max-width: 875px;
+  width: 95vw;
+}
+
+.card-signup.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card-main {
+  width: 50%;
+  padding: 0 20px 0 40px;
+}
+
+.card-main h1,
+.card-thankyou h1 {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.card-main p,
+.card-thankyou p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Card list */
+.card-main .signup-list {
+  margin-bottom: 30px;
+}
+
+.list-item {
+  list-style: none;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.list-item img {
+  margin-right: 15px;
+}
+
+/* Card form */
+.form-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-email .form-labels {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.form-email input[type=text] {
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-bottom: 15px;
+  padding: 17px 20px;
+  font-size: 15px;
+  transition: 0.3s;
+  color: var(--dark-grey-color);
+}
+
+.form-email input[type=text]:focus {
+  border: 1px solid var(--dark-grey-color);
+}
+
+/* Invalid email */
+.form-email .form-labels .invalid-label {
+  float: right;
+  color: var(--tomato-color);
+  visibility: hidden;
+}
+
+.invalid input[type=text] {
+  color: var(--tomato-color);
+  border: 1px solid var(--tomato-color);
+  background-color: hsla(4, 100%, 67%, 20%);
+}
+
+.form-email .form-labels .invalid-label.visible {
+  visibility: visible;
+}
+
+/* Button */
+.button-main {
+  width: 100%;
+  font-family: inherit;
+  padding: 17px 0;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--dark-grey-color);
+  color: var(--white-color);
+  font-size: 15px;
+  font-weight: 700;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-main:hover {
+  background-image: linear-gradient(to right, #ff537b , #fe693e);
+  box-shadow: 0 20px 20px rgba(255, 83, 123, 0.3);
+}
+
+/* Card img */
+.card-img {
+  width: 50%;
+}
+
+.card-img img {
+  max-width: 370px;
+  width: 100%;
+  float: right;
+}
+
+/* Card Thankyou */
+.card-thankyou {
+  width: 500px;
+  flex-direction: column;
+  align-items: start;
+  padding: 50px 60px;
+}
+
+.card-thankyou img {
+  float: left;
+  margin-bottom: 30px;
+}
+
+.card-thankyou span {
+  font-weight: 700;
+}
+
+.card-thankyou button {
+  margin: 15px 0;
+}
+
+.attribution { 
+  text-align: center;
+  color: var(--white-color);
+  margin-top: 5px;
+}
+
+.attribution a {
+  color: #ff537b;
+}
+
+@media(max-width: 375px) {
+  .card-signup, .card-thankyou {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    border-radius: 0;
+    padding: 0;
+  }
+  .card-main,
+  .card-thankyou {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .card-main {
+    margin-top: 290px;
+  }
+
+  .card-img {
+    width: 100%;
+  }
+
+  .card-img img{
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .card-main h1,
+  .card-thankyou h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+
+  .card-thankyou {
+    justify-content: flex-start;
+  }
+
+  .card-thankyou img {
+    margin-top: 100px;
+  }
+
+  .card-thankyou button {
+    position: absolute;
+    bottom: 15px;
+    width: 87%;
+  }
+
+}
+
+
