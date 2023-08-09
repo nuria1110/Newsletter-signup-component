@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution](#)
+- [Solution](https://www.frontendmentor.io/solutions/newsletter-signup-component-using-reactjs-sncNZVrSAL)
 - [Live Site](https://newsletter-signup-component-nuriatr.netlify.app/)
 
 ### Built with
